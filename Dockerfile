@@ -6,6 +6,7 @@ RUN yum -y update && \
   yum -y install gzip && \
   yum -y install which && \
   yum -y install make gcc* && \
+  yum -y install zip && \
   yum clean all
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
