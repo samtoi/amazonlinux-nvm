@@ -9,12 +9,12 @@ RUN yum -y update && \
   yum -y install zip && \
   yum clean all
 
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-RUN /bin/bash -c "source /root/.nvm/nvm.sh; nvm install 8.11.3"
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
+RUN /bin/bash -c "source /root/.nvm/nvm.sh; nvm install 12.16"
 
 RUN { \
   echo 'export NVM_DIR=~/.nvm'; \
   echo '. ~/.nvm/nvm.sh'; \
   } > /root/.bashrc
 
-CMD /bin/bash -c "source /root/.nvm/nvm.sh; nvm use 8.11.3"
+CMD /bin/bash -c "source /root/.nvm/nvm.sh; nvm use 12.16"
